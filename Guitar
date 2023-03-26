@@ -1,0 +1,16 @@
+public class Guitar extends Instrument{
+    protected int stringsCount;
+
+    Guitar(){
+
+    }
+
+    Guitar(int stringsCount){
+        this.stringsCount = stringsCount;
+    }
+    @Override
+    void play() {
+        System.out.println("guitar with " + stringsCount + " strings");
+        System.out.println(KEY);
+    }
+}
