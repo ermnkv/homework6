@@ -1,0 +1,16 @@
+public class Drum extends Instrument{
+    protected int size;
+
+    Drum(){
+    }
+
+    Drum(int size){
+        this.size = size;
+    }
+
+    @Override
+    void play() {
+        System.out.println("drum size " + size);
+        System.out.println(KEY);
+    }
+}
