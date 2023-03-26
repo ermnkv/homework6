@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Dota2 implements ComputerGame {
+
+    @Override
+    public void shoot() {
+        System.out.println("Headshot! -100");
+    }
+
+    @Override
+    public void move() {
+ System.out.println("Moved");
+    }
+    @Override
+ public void start() {
+ Scanner scanner = new Scanner(System.in);
+ System.out.println("What you will do? (Move|Shoot?)");
+ String action = scanner.nextLine();
+        if(action.equals("Move")) {
+            move();
+        } else if (action.equals("Shoot")){
+            shoot();
+        } else System.out.println("x_x");
+    }
+
+    @Override
+    public Boolean end() {
+        System.out.println("The end!");
+        System.exit(0);
+        return null;
+    }
+}
